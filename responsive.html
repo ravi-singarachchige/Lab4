@@ -21,7 +21,26 @@ Description : Responsive Layouts.
 	<link rel="stylesheet" href="menu.css">
 
 	<style>
-		
+/* CSS */
+/* menu.css */
+
+.menu {
+    float: left;
+    width: 150px;
+}
+
+.content {
+    margin-left: 150px;
+}
+
+@media (max-width: 768px) {
+    .menu, .content {
+        float: none;
+        width: auto;
+        margin-left: 0;
+    }
+}
+	
 		body {
 			margin: 0;
 			padding: 0;
