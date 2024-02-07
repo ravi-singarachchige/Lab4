@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Rakshita Suri, Ravindith Singarchchige
+Submission  : Feb 07, 2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,69 +18,122 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" href="menu.css">
 
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
+	<style>
+		
+		body {
+			margin: 0;
+			padding: 0;
 		}
-		.row{ 
-			border: 1px solid red;			
+	
+		img {
+			max-width: 100%;
+			height: auto;
 		}
-		.large {
-			border: 1px solid blue;	
+	
+		.container {
+			width: 100%;
 		}
-		.medium {
-			border: 1px solid green;	
+	
+		.header,
+		.footer {
+			background-color: #f2f2f2;
+			text-align: center;
+			padding: 10px;
 		}
+	
+		.main {
+			padding: 15px;
+			margin-left: 150px;
+		}
+	
+		.footer {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+	
+		.news-item {
+			padding: 10px;
+		}
+	
+		.row {
+			display: block;
+		}
+	
+		.large,
+		.medium,
 		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
-
-    <style>
-		body { margin: 0; padding: 0;}
-		img { max-width: 100%; height: auto; }
-        .container { width: 100%;}
-        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
-        .main { padding: 15px; margin-left: 150px;}		
-        .footer { position: fixed; bottom: 0; width: 100%;}
-        .news-item { padding: 10px; }
-		
-		.row { 
-			/*I need some CSS codes.*/		
+			width: 100%;
+			box-sizing: border-box;
+			padding: 10px;
+			float: left;
 		}
-
-		.large, .medium, .small {
-			/*I need some CSS codes.*/
-		}
-		
+	
 		.gap {
-			/*I need some CSS codes.*/
+			clear: both;
+			height: 50px;
 		}
-
-		@media screen and (min-width: 769px) {			
-			.large { 
-				/*I need some CSS codes.*/
+	
+		@media screen and (min-width: 769px) {
+			.large {
+				width: 100%;
 			}
-			.medium { 
-				/*I need some CSS codes.*/
+			.medium {
+				width: 70%;
 			}
-			.small { 
-				/*I need some CSS codes.*/
-			 }
+			.small {
+				width: 30%;
+			}
 		}
-
-        @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
-        }
-
-        @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
-        }
-
-        
-    </style>
+	
+		@media screen and (max-width: 768px) and (min-width: 481px) {
+			.large,
+			.medium,
+			.small {
+				width: 100%;
+			}
+			.medium {
+				width: 60%;
+			}
+			.small {
+				width: 40%;
+			}
+			.header,
+			.main,
+			.footer {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+			.main {
+				margin-left: 0;
+			}
+		}
+	
+		@media screen and (max-width: 480px) {
+			.large,
+			.medium,
+			.small {
+				width: 100%;
+			}
+			.header h1,
+			.main h1 {
+				font-size: 18px;
+			}
+			.header,
+			.main,
+			.footer {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+			.main {
+				margin-left: 0;
+			}
+		}
+	</style>
 </head>
 <body>
     <div class="container">
@@ -135,7 +188,7 @@ Description : Responsive Layouts.
 				<!-- Medium news item -->
 				<div class="medium news-item">
 					<header>
-						<h1>Mahdi Ansari Takes a Historic Spacewalk Near the ISS</h1>
+						<h1>Ravindith Singarachchige Takes a Historic Spacewalk Near the ISS</h1>
 					</header>
 					<img src="images/medium.jpg" alt="Medium Image">
 					<article>
